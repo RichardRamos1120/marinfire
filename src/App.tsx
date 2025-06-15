@@ -10,6 +10,7 @@ import StatusWidget from './components/sidebar/StatusWidget';
 import WeatherWidget from './components/sidebar/WeatherWidget';
 import QuickActions from './components/sidebar/QuickActions';
 import RecentIncidents from './components/sidebar/RecentIncidents';
+import moment from 'moment-timezone';
 
 function App() {
   const [activeSection, setActiveSection] = useState('incidents');
@@ -18,7 +19,9 @@ function App() {
     const updateTime = () => {
       const element = document.getElementById('lastUpdated');
       if (element) {
-        element.textContent = new Date().toLocaleTimeString();
+        const pstTime = moment().tz('America/Los_Angeles');
+        const timeString = pstTime.format('h:mm:ss A z');
+        element.textContent = timeString;
       }
     };
     

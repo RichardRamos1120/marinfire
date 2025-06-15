@@ -65,10 +65,10 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onSectionChange }) => {
               key={pill.id}
               onClick={() => onSectionChange(pill.id)}
               className={`
-                px-4 py-2 rounded-full whitespace-nowrap transition-all duration-300
+                px-4 py-2 rounded-full whitespace-nowrap transition-colors duration-300
                 ${activeSection === pill.id
-                  ? 'bg-blue-500 transform -translate-y-0.5'
-                  : 'bg-slate-700 hover:bg-blue-500 hover:transform hover:-translate-y-0.5'
+                  ? 'bg-blue-500'
+                  : 'bg-slate-700 hover:bg-blue-500'
                 }
               `}
             >

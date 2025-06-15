@@ -44,7 +44,7 @@ const IncidentTools: React.FC = () => {
               <a
                 key={idx}
                 href="#"
-                className="block bg-gray-50 p-3 rounded text-sm text-gray-700 border-l-4 border-blue-500 hover:bg-gray-100 hover:translate-x-1 transition-all"
+                className="block bg-gray-50 p-3 rounded text-sm text-gray-700 border-l-4 border-blue-500 hover:bg-gray-100 transition-colors"
               >
                 {item}
               </a>
